@@ -40,6 +40,12 @@ Ht/skh2wZSHtJgejt9kqIKMho1wtYz7ZTqMtN9GJK0VONbHP0Xu6
 
 EOF
 
+apt update
+apt install -y gnupg
+
+echo "deb http://ppa.launchpadcontent.net/itrue/mqueue-dev/ubuntu $CODENAME main" > /etc/apt/sources.list.d/apparmor-mqueue.list
+apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 831081403F1C01F6
+
 # install some packages we need
 apt update
 apt dist-upgrade -y
